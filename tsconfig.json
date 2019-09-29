@@ -1,0 +1,28 @@
+{
+  "include": ["./src/**/*"],
+  "exclude": ["./netlify/functions", "**/node_modules/**/*"],
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "lib": ["dom", "es2017"],
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "paths": {
+      "@common/*": ["./src/common/*"],
+      "@components/*": ["./src/components/*"],
+      "@config": ["./config.json"],
+      "@content": ["./content/*"],
+      "@static": ["./static/*"],
+      "@styled": ["./src/common/styled"],
+      "@styled/*": ["./src/common/styled/*"]
+    }
+  }
+}
